@@ -1,6 +1,7 @@
 programa
 {
 	
+inclua biblioteca Matematica --> mat
 	funcao inicio()
 	{
 	
@@ -42,6 +43,29 @@ programa
 	escreva("A média é: ", m)
 	escreva("\nA soma é: ", s)
 
+	real x,y,z
+	cadeia name
+	escreva("\n Nome do aluno: ")
+	leia(name)
+	escreva("Nota A: ")
+	leia(x)
+	escreva("Nota B: ")
+	leia(y)
+	z = ((x*2+y)/2+1)
+	escreva("Nome do aluno: ",name," Média: ", z)
+
+	real a,b,c, raiz1,raiz2,delta,raizdelta
+	escreva("\n A: ")
+	leia(a)
+	escreva("B: ")
+	leia(b)
+	escreva("C: ")
+	leia(c)
+	delta = ((b*b)-4*a*c)
+	raizdelta = mat.raiz(delta,2)
+	raiz1 = (-b + delta) / (2*a)
+	raiz2 = (-b - delta) / (2*a)
+	escreva("Raiz 1 = ",raiz1," Raiz 2= ",raiz2)
 	
 	}
 }
