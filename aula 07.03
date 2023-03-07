@@ -1,0 +1,47 @@
+programa
+{
+	
+	funcao inicio()
+	{
+	
+	real n1,n2
+	escreva("Nota 1: ")
+	leia(n1)
+	escreva("Nota 2: ")
+	leia(n2)
+	escreva("Média = ",(n1+n2)/2)
+
+	inteiro n3
+	escreva("\nDigite um número: ")
+	leia(n3)
+	escreva("Seu sucessor é: ", n3+1)
+	escreva("\nSeu antecessor é: ", n3-1)
+
+
+	real n4
+	escreva("\nInforme o valor do raio: ")
+	leia(n4)
+	escreva("A área do círculo é: ", 3.14*(n4*n4))
+
+	inteiro n5
+	escreva("\nDigite um valor: ")
+	leia(n5)
+	escreva("A raiz quadrada do número ",n5 ," é ",n5*n5)
+
+	real n6,n7,n8,n9, s,m
+	escreva("\nNota 1: ")
+	leia(n6)
+	escreva("Nota 2: ")
+	leia(n7)
+	escreva("Nota 3: ")
+	leia(n8)
+	escreva("Nota 4: ")
+	leia(n9)
+	s = (n6+n7+n8+n9)
+	m = (n6+n7+n8+n9)/4
+	escreva("A média é: ", m)
+	escreva("\nA soma é: ", s)
+
+	
+	}
+}
