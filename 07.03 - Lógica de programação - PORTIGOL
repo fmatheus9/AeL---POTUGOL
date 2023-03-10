@@ -67,11 +67,5 @@ inclua biblioteca Matematica --> mat
 	raiz2 = (-b - raizdelta) / (2*a)
 	escreva("Raiz 1 = ",raiz1," Raiz 2= ",raiz2)
 	
-	real p1,p2
-	escreva("Ponto 1: ")
-	leia(p1)
-	escreva("Ponto 2: ")
-	leia(p2)
-	escreva("\nA distancia do ponto 1 para o ponto 2 é: ", p2-p1)
 	}
 }
