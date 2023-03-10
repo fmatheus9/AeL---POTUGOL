@@ -30,6 +30,21 @@ programa
 		escreva("Funcionári, ", n4 , "seu salário final foi de: R$", 500+50*n1+(n3+n2))
 
 		escreva("\n----------------------------------------------\n")
+		
+		real x1, x2, y1, y2, auxiliar, distancia
+		escreva("Cordenada do primeiro X ponto x1: ")
+		leia(x1)
+		escreva("Cordenada do primeiro Y ponto y1: ")
+		leia(y1)
+		escreva("Cordenada do segundo X ponto x2: ")
+		leia(x2)
+		escreva("Cordenada do segundo Y ponto y2: ")
+		leia(y2)
+
+		auxiliar = (mat.potencia(x2-x1,2) + mat.potencia(y2-y1,2))
+		distancia = ( mat.raiz(auxiliar,2))
+
+		escreva("A distância do entre os dois pontos é: ", distancia)
 
 			
 	}
