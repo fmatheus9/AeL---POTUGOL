@@ -45,6 +45,18 @@ programa
 		distancia = ( mat.raiz(auxiliar,2))
 
 		escreva("A distância do entre os dois pontos é: ", distancia)
+		
+		escreva("\n----------------------------------------------\n")
+		
+		inteiro num1, unidade, dezena, centena, novo
+		escreva("Digite um número inteiro: ")	
+		leia(num1)
+		unidade = (num1 % 10)
+		dezena = ((num1 % 100)/10)
+		centena = (num1 / 100)
+		novo = (unidade * 100 + dezena * 10 + centena)
+		escreva("O valor do número ", num1," ao contrário é: ", novo)
+		
 
 			
 	}
