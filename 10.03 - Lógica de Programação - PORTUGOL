@@ -15,5 +15,22 @@ programa
 		escreva("Digite a quantidade de Milkshake (R$3,00): ")
 		leia(x)
 		escreva("O valor final foi: R$", a*3+b*2.50+c*2.50+d*1+x*3," reais")
+
+		escreva("\n----------------------------------------------\n")
+
+		real n1,n2,n3
+		cadeia n4
+		escreva("\nDigite seu nome: ")
+		leia(n4)
+		escreva("Número de carros vendidos: ")
+		leia(n1)
+		escreva("Valor total das vendas: ")
+		leia(n2)
+		n3 = (n2*(5/100))
+		escreva("Funcionári, ", n4 , "seu salário final foi de: R$", 500+50*n1+(n3+n2))
+
+		escreva("\n----------------------------------------------\n")
+
+			
 	}
 }
