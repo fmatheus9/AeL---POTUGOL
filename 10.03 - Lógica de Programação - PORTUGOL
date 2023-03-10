@@ -57,6 +57,15 @@ programa
 		novo = (unidade * 100 + dezena * 10 + centena)
 		escreva("O valor do número ", num1," ao contrário é: ", novo)
 		
+		real prestacao, acrescimo, desconto, prejuizo
+		escreva("Entre com o valor da prestação: ")
+		leia(prestacao)
+		acrescimo = prestacao * 1.1
+		desconto = acrescimo * 0.9
+		prejuizo = prestacao- desconto
+		prestacao = prestacao+acrescimo-prejuizo
+		escreva("O valor a pagar é de R$ ", prestacao, " e o prejuizo foi" , prejuizo)
+		
 
 			
 	}
