@@ -1,0 +1,79 @@
+programa
+{
+	
+	funcao inicio()
+	{
+		inteiro x
+		escreva("Digite um valor: ")
+		leia(x)
+		se (x % 2 == 0)
+		{
+			escreva("Número par!")
+		}
+		senao 
+		{
+			escreva("Número impar!")
+		}
+
+
+		escreva("\n======================================================")
+
+		inteiro y
+		escreva("\nDigite um valor: ")
+		leia(y)
+		se (y % 3 == 0 e y % 2 == 0)
+		{
+			escreva("Número par e divisivel por 3")
+		}
+		senao
+		{
+			escreva("Numero não divisivel por 3")
+		}
+
+		escreva("\n======================================================")
+
+		inteiro z
+		escreva("\nDigite um valor: ")
+		leia(z)
+		se (z<0)
+		{
+			escreva("Numero negativo")
+		}
+		senao
+		{
+			escreva("Numero positivo")
+		}
+
+		escreva("\n======================================================")
+		
+		inteiro n1, n2
+		escreva("\nDigite um valor: ")
+		leia(n1)
+		escreva("Digite outro valor: ")
+		leia(n2)
+		se (n1>n2)
+		{
+			escreva("O primeiro valor é mairo ", n1, " > ", n2)
+		}
+		senao 
+		{
+			escreva("O segundo valor é maior ", n2, " > ", n1)
+			
+		}
+
+		escreva("\n======================================================")
+
+		cadeia palavra
+		escreva("Escreva uma palavra")
+		leia(palavra)
+		se (palavra == "Algorítimo")
+		{
+			escreva("ALG")
+		}
+		senao
+		{
+			escreva("BELEZA")
+		}		
+	}
+	
+}
