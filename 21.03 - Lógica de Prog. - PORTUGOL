@@ -1,0 +1,31 @@
+programa {
+	funcao inicio() {
+		cadeia nome
+		caracter sexo, carteira
+		inteiro idade
+		
+		escreva("Digite o nome: ")
+		leia(nome)
+		escreva("Digite o sexo (m ou f): ")
+		leia(sexo)
+		escreva("Digite a idade: ")
+		leia(idade)
+		se (sexo == 'm'){
+		    se (idade >= 18){
+		        escreva("Possui carteira AB (s ou n): ")
+		        leia(carteira)
+		        se (carteira == 's'){
+		            escreva("Chamado para a entrevista")
+		        }
+		        }
+		}
+		se (sexo == 'f'){
+		    se (idade >= 21){
+		        escreva("Chamado para a entrevista")
+		    }
+		}
+		senao{
+		    escreva("Negado")
+		}
+	}
+}
