@@ -94,5 +94,41 @@ programa {
 	        escreva("Saindo do programa...")
 	        pare
 	    }
+	    
+	    
+	    inteiro x
+	    real y, z, c1, c2, c3, c4
+	    escreva("Informe o primeiro número: ")
+	    leia(y)
+	    escreva("Informe o segundo número: ")
+	    leia(z)
+	    escreva("\n1 ---> +")
+	    escreva("\n2 ---> -")
+	    escreva("\n3 ---> *")
+	    escreva("\n4 ---> /")
+	    escreva("\nInforme a operação desejada: ")
+	    leia(x)
+	    escolha (x)
+	    {
+	        caso 1:
+	        c4 = (y+z)
+	        escreva(y, " + ", z, " = ", c4)
+	        pare
+	        
+	        caso 2:
+	        c4 = (y-z)
+	        escreva(y, " - ", z, " = ", c4)
+	        pare
+	        
+	        caso 3:
+	        c4 = (y*z)
+	        escreva(y, " * ", z, " = ", c4)
+	        pare
+	        
+	        caso 4:
+	        c4 = (y/z)
+	        escreva(y, " / ", z, " = ", c4)
+	        pare
+	    }
 	}
 }
