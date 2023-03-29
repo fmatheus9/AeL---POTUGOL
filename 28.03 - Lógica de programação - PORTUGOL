@@ -87,8 +87,12 @@ programa {
 		    escreva("Valor total das vendas: ")
 		    leia(n2)
 		    n3 = (n2*(5/100))
-		    escreva("Funcionári, ", n4 , "seu salário final foi de: R$", 500+50*n1+(n3+n2))
+		    escreva(" O seu salário final foi de: R$", 500+50*n1+(n3+n2))
+	        pare
 	        
+	        caso 5: 
+	        escreva("Saindo do programa...")
+	        pare
 	    }
 	}
 }
