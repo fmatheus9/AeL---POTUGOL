@@ -1,0 +1,38 @@
+programa
+{
+	
+	funcao inicio()
+	{
+		caracter mam, ave, rep, quad, bip, voa, aqua, car, herb, oni, frut
+		escreva("É mamífero? (s ou n)\n")
+		leia(mam)
+		escolha (mam)
+		{
+		caso 's':
+		escreva("É quadrupede?")
+		leia(quad)
+			escolha (quad){
+				caso's':
+				escreva("É carnívoro?")
+				leia(car)
+				se (car == 's'){
+					escreva("O animal escolhido foi o LEÃO")
+					}
+				senao{
+					escreva("O animal escolhido foi o CAVALO")
+					}
+				}
+		
+		caso 'n':
+		escreva("É uma ave? (s ou n)")
+		leia(ave)
+			escolha (ave){
+				
+				}
+		
+		}
+		
+		 
+		
+	}
+}
