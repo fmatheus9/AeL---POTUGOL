@@ -1,0 +1,38 @@
+programa
+{
+	
+	funcao inicio()
+	{
+
+		//MATHEUS FERRAREZI MESQUITA FAGUNDES - 24639//
+		
+		real trabalho, avaliacao, exame, media
+		escreva("Nota do trabalho: ")
+		leia(trabalho)
+		escreva("Nota da avaliação: ")
+		leia(avaliacao)
+		escreva("Nota do exame: ")
+		leia(exame)
+		media = ((trabalho*3+avaliacao*4+exame*3)/10)
+		se (media < 5.00){
+			escreva("Média: ", media )
+			escreva("\nConceito = E.")
+			}
+		se (media >= 5.00 e media < 6.00){
+			escreva("Média: ", media )
+			escreva("\nConceito = D.")
+			}
+		se (media>= 6.00 e media < 7.00){
+			escreva("Média: ", media )
+			escreva("\nConceito = C.")
+			} 
+		se (media >= 7.00 e media <8.00){
+			escreva("Média: ", media )
+			escreva("\nConceito = B.")
+			}
+		se (media >= 8.00) {
+			escreva("Média: ", media )
+			escreva("\nConceito = A.")
+			}
+	}
+}
