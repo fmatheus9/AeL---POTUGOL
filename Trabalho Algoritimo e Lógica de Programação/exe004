@@ -1,10 +1,10 @@
 programa
 {
-  
-  //MATHEUS FERRAREZI MESQUITA FAGUNDES//
-  
+	
 	funcao inicio()
 	{
+
+		//MATHEUS FERRAREZI MESQUITA FAGUNDES - 24639//
 
 		real bolas, preco, p1, p2, p3, precof
 		caracter sabor
@@ -22,7 +22,7 @@ programa
 					p1 = precof-(precof*0.2)
 					escreva("\nPreço a pagar: R$", p1)
 					}
-				se (bolas < 3){
+				senao se (bolas < 3){
 					escreva("Sorvete de Chocolate com menos de três bolas: sem desconto")
 					escreva("\nPreço a pagar: R$", precof)
 					}
@@ -35,7 +35,7 @@ programa
 					p2 = precof-(precof*0.15)
 					escreva("\nPreço a pagar: R$", p2)
 					}
-				se (bolas	> 5){
+				senao se (bolas	> 5){
 					escreva("Sorvete de Uva com mais de cinco bolas: desconto de 30%")
 					p3 = precof-(precof*0.3)
 					escreva("\nPreço a pagar: R$", p3)
