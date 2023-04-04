@@ -1,0 +1,52 @@
+programa
+{
+  
+  //MATHEUS FERRAREZI MESQUITA FAGUNDES//
+  
+	funcao inicio()
+	{
+
+		real bolas, preco, p1, p2, p3, precof
+		caracter sabor
+		escreva("Informe o sabor (C ou U): ")
+		leia(sabor)
+		escreva("Informe a quantidade de bolas: ")
+		leia(bolas)
+		escreva("Informe o preço por bola: R$")
+		leia(preco)
+		precof = bolas*preco
+		escolha (sabor){
+			caso 'C':
+				se (bolas > 3){
+					escreva("Sorvete de Chocolate com mais de três bolas: desconto de 20%")
+					p1 = precof-(precof*0.2)
+					escreva("\nPreço a pagar: R$", p1)
+					}
+				se (bolas < 3){
+					escreva("Sorvete de Chocolate com menos de três bolas: sem desconto")
+					escreva("\nPreço a pagar: R$", precof)
+					}
+				
+			pare
+
+			caso 'U':
+				se (bolas > 2 e bolas <= 5){
+					escreva("Sorvete de Uva com mais de duas bolas: desconto de 15%")
+					p2 = precof-(precof*0.15)
+					escreva("\nPreço a pagar: R$", p2)
+					}
+				se (bolas	> 5){
+					escreva("Sorvete de Uva com mais de cinco bolas: desconto de 30%")
+					p3 = precof-(precof*0.3)
+					escreva("\nPreço a pagar: R$", p3)
+					}
+				senao{
+					escreva("Sorvete de Uva com menos de duas bolas: sem desconto")
+					escreva("\nPreço a pagar: R$", precof)
+					}
+			pare
+			
+			}
+		
+	}
+}
