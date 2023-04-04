@@ -1,10 +1,11 @@
 programa
 {
 	
-  //MATHEUS FERRAREZI MESQUITA FAGUNDES//
-  
 	funcao inicio()
 	{
+
+		// MATHEUS FERRAREZI MESQUITA FAGUNDES - 24639//
+		
 		real n1, n2, n3, A, B, C
 		escreva("Informe o valor 1: ")
 		leia(A)
@@ -13,19 +14,23 @@ programa
 		escreva("Informe o valor 3: ")
 		leia(C)
 		se (A> B e A> C){
-			se (A >= B+C  ){
+			se (A >= B+C){
 				escreva("Nenhum triângulo é formado")
 			}
 			senao{
-			se (A*A == B*B+C*C){
-				escreva("Um triângulo retângulo é formado")
-			}
-			se (A*A > B*B+C*C ){
-				escreva("Um triângulo obtusângulo é formado")
-			}
-			se (A*A < B*B+C*C){
-				escreva("Um triângulo acutângulo é formado")
-			}
+				se (A*A == B*B+C*C){
+					escreva("Um triângulo retângulo é formado")
+				}
+				senao{
+					se (A*A > B*B+C*C ){
+						escreva("Um triângulo obtusângulo é formado")
+					}
+					senao{
+						se (A*A < B*B+C*C){
+							escreva("Um triângulo acutângulo é formado")
+						}	
+					}
+				}
 			}
 		}	
 
@@ -34,15 +39,19 @@ programa
 				escreva("Nenhum triângulo é formado")
 			}
 			senao{
-			se (B*B == A*A+C*C){
-				escreva("Um triângulo retângulo é formado")
-			}
-			se (B*B > A*A+C*C ){
-				escreva("Um triângulo obtusângulo é formado")
-			}
-			se (B*B < A*A+C*C){
-				escreva("Um triângulo acutângulo é formado")
-			}
+				se (B*B == A*A+C*C){
+					escreva("Um triângulo retângulo é formado")
+				}
+				senao{
+					se (B*B > A*A+C*C ){
+						escreva("Um triângulo obtusângulo é formado")
+					}
+					senao{
+						se (B*B < A*A+C*C){
+							escreva("Um triângulo acutângulo é formado")
+						}
+					}
+				}
 			}
 		}
 
@@ -51,15 +60,19 @@ programa
 				escreva("Nenhum triângulo é formado")
 			}
 			senao{
-			se (C*C == B*B+A*A){
-				escreva("Um triângulo retângulo é formado")
-			}
-			se (C*C > B*B+A*A){
-				escreva("Um triângulo obtusângulo é formado")
-			}
-			se (C*C < B*B+A*A){
-				escreva("Um triângulo acutângulo é formado")
-			}
+				se (C*C == B*B+A*A){
+					escreva("Um triângulo retângulo é formado")
+				}
+				senao{
+					se (C*C > B*B+A*A){
+						escreva("Um triângulo obtusângulo é formado")
+					}
+					senao{
+						se (C*C < B*B+A*A){
+							escreva("Um triângulo acutângulo é formado")
+						}
+					}
+				}
 			}
 			
 		}
