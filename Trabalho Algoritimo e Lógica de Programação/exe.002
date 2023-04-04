@@ -1,0 +1,18 @@
+programa
+{
+
+	//MATHEUS FERRARREI MESQUITA FAGUNDES//
+	
+	funcao inicio()
+	{
+		inteiro x, min, y, horas, seg
+		escreva("Informe um valor em segundos: ")
+		leia(x)
+		horas = (x/3600)
+		y = (x%3600)
+		min = (y/60)
+		seg = (x%60)
+		escreva(horas,"h:",min,"min:",seg,"s")
+		
+	}
+}
