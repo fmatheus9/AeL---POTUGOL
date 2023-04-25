@@ -11,6 +11,25 @@ programa
 		enquanto(cont <= 10){
 			escreva("\n",cont," x ", x," = ", cont*x)
 			cont = cont + 1
-		}	
-	}
-}
+		}
+		escreva("\nCABO AS TABUADA")	
+
+		real media, acm, mediaturma
+		inteiro conta
+		conta = 0 
+		acm = 0.0
+		escreva("\nDigite a média do aluno: ")
+		leia(media)
+		enquanto(media >= 0){
+			acm = acm + media
+			conta = conta + 1
+			escreva("Digite a média do aluno: ")
+			leia(media)
+		}
+		se(conta == 0){
+			escreva("Nenhum aluno inscrito")
+		}
+		senao{
+			mediaturma = acm/conta
+			escreva("Média da turma = ", mediaturma)
+		}
