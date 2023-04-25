@@ -1,0 +1,16 @@
+programa
+{
+	
+	funcao inicio()
+	{
+		inteiro x, cont
+		escreva("Informe um número inteiro: ")
+		leia(x)
+		cont = 1
+
+		enquanto(cont <= 10){
+			escreva("\n",cont," x ", x," = ", cont*x)
+			cont = cont + 1
+		}	
+	}
+}
