@@ -1,0 +1,31 @@
+programa
+{
+	
+	funcao inicio()
+	{
+		inteiro x, cont
+		escreva("Informe um número: ")
+		leia(x)
+		cont = 0
+		enquanto(cont<=10){
+			escreva(x," x ", cont, " = ", x*cont,"\n")
+			cont++
+		}
+
+		inteiro y, cont2
+		escreva("Informe outro número: ")
+		leia(y)
+		cont2 = 0
+		faca{
+			escreva(y," x ", cont2, " = ", y*cont2,"\n")
+			cont2++
+		} enquanto(cont2<=10)
+
+		inteiro z, cont3
+		escreva("Informe um númeor: ")
+		leia(z)
+		para(cont3=0;cont3<=10;cont3++){
+			escreva(z," x ", cont3, " = ", z*cont3,"\n")
+		}
+	}
+}
