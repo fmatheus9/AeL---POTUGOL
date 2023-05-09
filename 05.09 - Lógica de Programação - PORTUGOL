@@ -27,5 +27,12 @@ programa
 		para(cont3=0;cont3<=10;cont3++){
 			escreva(z," x ", cont3, " = ", z*cont3,"\n")
 		}
+		
+		inteiro cont, s, m
+		para(cont=600;cont>=0;cont--){
+			m = cont/60
+			s = cont%60
+			escreva(m,":",s,"\n")
+		}
 	}
 }
