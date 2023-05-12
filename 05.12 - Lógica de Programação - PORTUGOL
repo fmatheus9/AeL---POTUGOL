@@ -1,0 +1,78 @@
+programa
+{
+	
+	funcao inicio()
+	{
+	
+		real media
+		inteiro x, cont, acm
+		escreva("Informe um valor: ")
+			leia(x)
+			acm = x
+		para(cont = 1; x>0;cont++){
+			escreva("Informe um valor: ")
+			leia(x)
+			acm = acm + x
+		}
+		escreva("Somatória de todos os valores digitados = ", acm)
+		escreva("\nQuantidade de números digitados = ", cont)
+		media = acm/cont-1
+		escreva("\nMédia = ", media)
+
+		escreva("\n------------------------------------------")
+
+		inteiro y, contador
+		escreva("\nInforme um número: ")
+		leia(y)
+		para(contador = 0;contador<=20;contador++){
+			escreva("\n",y+contador)
+		}
+
+		escreva("\n------------------------------------------")
+
+		inteiro z, cont2
+		escreva("\nInforme um número: ")
+		leia(z)
+		para(cont2=1;cont2<=10;cont2++){
+			escreva("\n", z, " x ", cont2, " = ", z*cont2)
+		}
+
+		escreva("\n------------------------------------------")
+
+		inteiro cont3, m, s
+		para(cont3=600;cont3>0;cont3--){
+			m=cont3/60
+			s=cont3%60
+			escreva("\n", m, ":",s)
+		}
+		escreva("\n0:0")
+
+		
+		escreva("\n------------------------------------------")
+
+		inteiro n, cont4, f
+		escreva("Informe um número: ")
+		leia(n)
+		f=1
+		para(cont4=1;cont4<=n;cont4++){
+			f = f*cont4
+		}
+		escreva(f)
+
+		escreva("\n------------------------------------------")
+
+		inteiro n1,n2,cont5, acm2
+		acm2=0
+		escreva("Informe o n1: ")
+		leia(n1)
+		escreva("Informe o n2: ")
+		leia(n2)
+		para(cont5=n1;cont5<=n2;cont5++){
+			escreva("\n",cont5)
+			acm2=acm2+cont5
+		}
+		escreva("\nsomatório = ",acm2-n1-n2)
+		
+		
+	}
+}
