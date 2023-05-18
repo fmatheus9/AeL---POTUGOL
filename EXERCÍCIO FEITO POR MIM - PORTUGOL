@@ -1,0 +1,26 @@
+programa
+{
+	
+	funcao inicio()
+	{
+		escreva("Faça um programa que peça ao usuário que informe o termo inicial, a razão e o número de termos de uma PA. O sistema deverá fornecer a PA.")
+		
+		escreva("\n\n=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n")
+
+		inteiro n1, r, nx, cont, n
+		escreva("\nInforme o primeiro termo da PA: ")
+		leia(n1)
+		escreva("\nInforme a razão: ")
+		leia(r)
+		escreva("\nInforme o número de termos da PA: ")
+		leia(nx)
+		cont = 1
+		
+		enquanto(cont<nx*r){
+			n = 0 +n1
+			n1=n1+r
+			escreva("<> ",n," <> ")
+			cont = cont+r
+		}
+	}
+}
