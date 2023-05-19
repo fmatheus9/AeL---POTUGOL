@@ -1,0 +1,40 @@
+programa
+{
+	
+	funcao inicio()
+	{
+		real vet[10], acm, media
+		inteiro i, cont1,cont2
+		cont1=0
+		cont2=0
+		acm = 0.0
+		para(i=0;i<10;i++){
+			escreva("Nota ", i+1, ": ")
+			leia(vet[i])
+			acm = acm + vet[i]
+		}
+		media = acm/10 
+
+		escreva("\n-----------------------------------------------------------------------\n")
+		
+		escreva("\nMédia da sala = ", media,"\n")
+		para(i=0;i<10;i++){
+			se(vet[i]<media){ 
+				escreva("\nStatus da nota ", i+1," - ",vet[i]," = REPROVADO")
+				cont1++
+			}
+			senao{
+				escreva("\nStatus da nota ", i+1," - ",vet[i]," = APROVADO")
+				cont2++
+			}
+		}
+
+		escreva("\n\n-----------------------------------------------------------------------\n")
+		
+		escreva("\nQuantidade de alunos acima da média: ", cont2)
+		escreva("\nQuantidade de alunos abaixo da média: ", cont1)
+ 
+		escreva("\n\n-----------------------------------------------------------------------\n")
+		
+	}
+}
