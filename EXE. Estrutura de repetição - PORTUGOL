@@ -1,0 +1,48 @@
+programa
+{
+	
+	funcao inicio()
+	{
+		inteiro i, total, t, b, r
+		caracter x
+		i=1
+		t=0
+		b=0
+		r=0
+		total=0
+		escreva("Levantamento de Estoque:\nT-Vinho tinto.\nB-Vinho branco.\nR-Vinho rose.\nF-Finalizar programa.\n") 
+
+		escreva("\n=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n")
+
+		faca{
+			escreva("\n->")
+			leia(x)
+			escolha(x){
+				caso 'T':
+				t++
+				total++ 
+				pare
+				caso 'B':
+				b++
+				total++
+				pare
+				caso 'R':
+				r++
+				total++
+				pare
+				caso 'F':
+				escreva("Programa Finalizado. ")
+				pare
+				caso contrario: escreva("Valor Inválido")
+								
+			}
+		}enquanto(x!='F')
+
+		escreva("\n=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n")
+		
+		escreva("\nTotal de vinhos: ",total)
+		escreva("\nTotal de vinhos tintos: ", t)
+		escreva("\nTotal de vinhos brancos: ", b)
+		escreva("\nTotal de vinhos roses: ",r)
+	}
+}
