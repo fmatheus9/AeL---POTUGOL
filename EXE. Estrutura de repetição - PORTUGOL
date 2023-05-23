@@ -94,3 +94,24 @@ programa
 		}enquanto(k<=10)
 	}
 }
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+programa
+{
+	
+	funcao inicio()
+	{
+		inteiro i, x, cont
+		cont=1
+		faca{
+			escreva("\nInforme um número: \n")
+			leia(x)
+			para(i=1;i<=10;i++){
+				escreva("\n",x,"x",i," = ",x*i)
+			}
+		}enquanto(x!=-1)
+	
+	}
+}
+
