@@ -1,1 +1,151 @@
 
+//MATHEUS FERRAREZI MESQUITA FAGUNDES - 24639
+//JOÃO PUCCI - 24735 
+
+programa {
+  funcao inicio() {
+
+  inteiro vetidade[3], maioridade, somaidade, i, media50, menoridade, x, somaidadetotal,z, media,m
+  cadeia  vetnome[3], pessoamaisnova, nomeabaixodamedia
+  m=0
+  media=0
+  somaidadetotal=0
+  z=0
+  x=0
+  media50=0
+  maioridade=0
+  menoridade=1000
+  somaidade=0
+  pessoamaisnova=""
+  nomeabaixodamedia=""
+
+    para(i=0;i<3;i++){
+        escreva("Informe a idade ",i+1,": ")
+        leia(vetidade[i])
+        escreva("Informe o nome ",i+1,": ")
+        leia(vetnome[i])
+        somaidadetotal=somaidadetotal+vetidade[i]
+        z++
+        media=somaidadetotal/z
+    }
+    para(i=0;i<3;i++){
+        se(vetidade[i]>maioridade){
+            maioridade=vetidade[i]
+        }
+        se(vetidade[i]>50){
+            media50=media50+vetidade[i]
+            x++
+              se(x==0){
+                x=1
+              }
+              media50=media50/x
+        }
+        se(vetidade[i]>15 e vetidade[i]<30){
+            somaidade=somaidade+vetidade[i]
+        }
+
+   
+        se(vetidade[i]<menoridade){
+            menoridade=vetidade[i]
+            pessoamaisnova=vetnome[i]
+            
+        }
+        
+        se(vetidade[i]<media){
+            m++
+            nomeabaixodamedia=nomeabaixodamedia+vetnome[i]+" - "
+        }
+            
+    }
+
+  escreva("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n")
+  
+  escreva("Idade da pessoa mais velha: ",maioridade)
+  
+  escreva("\nMédia das idades maiores que 50: ",media50)
+
+  escreva("\nSoma das idades maiores que 15 e menores que 30: ",somaidade)
+  
+  escreva("\nNome da pessoa mais nova: ",pessoamaisnova,". Idade da pessoa mais nova: ",menoridade)
+  
+  escreva("\nNumero de pessoas com idade abaixo da média, sendo a média = ",media, ": ", m, ", sendo elas: ",nomeabaixodamedia)
+  escreva("\n=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=")
+  
+  
+  }
+}
+
+========================================================================================================================================================================================================================================
+
+
+//MATHEUS FERRAREZI MESQUITA FAGUNDES - 24639
+//JOÃO PUCCI - 24735 
+
+programa {
+	funcao inicio() {
+		inteiro i,l,n,x,y
+		y=0
+		x=0
+		escreva("Informe um valor: ")
+		leia(n)
+		enquanto(n!=-1){
+		para(i=1;i<=n;i++){
+		    para(l=1;l<=i;l++){
+		        x++
+		        escreva(x," ")
+		    }
+		    escreva("\n")
+		}
+		escreva("-1 encerra o programa: ")
+		leia(n)
+		y++
+		x=0
+		}
+	escreva("Foram solicitados ", y," triângulos.")
+	}
+}
+
+========================================================================================================================================================================================================================================
+
+
+//MATHEUS FERRAREZI MESQUITA FAGUNDES - 24639
+//JOÃO PUCCI - 24735 
+
+programa
+{
+	
+	funcao inicio()
+	{
+		inteiro vet[11], mult[]={10,9,8,7,6,5,4,3,2}, mult2[]={11,10,9,8,7,6,5,4,3,2}, soma1=0,soma2=0,x1,x2
+		para(inteiro i=0;i<11;i++){
+			escreva("Informe o ", i+1,"º valor do CPF: ")
+			leia(vet[i])
+		}
+		para(inteiro i=0;i<9;i++){
+			soma1=soma1+vet[i]*mult[i]
+		}
+		x1=soma1%11
+		se(x1<2){
+			x1=0
+		}
+		senao{
+			x1=11-x1
+		}
+		para(inteiro i=0;i<10;i++){
+			soma2=soma2+vet[i]*mult2[i]
+		}
+		x2=soma2%11
+		se(x2<2){
+			x2=0
+		}
+		senao{
+			x2=11-x2
+		}
+		se(x1==vet[9] e x2==vet[10]){
+			escreva("CPF válido")
+		}
+		senao{
+			escreva("CPF inválido")
+		}
+	}
+}
