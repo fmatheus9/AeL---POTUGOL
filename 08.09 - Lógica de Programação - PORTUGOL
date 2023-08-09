@@ -1,0 +1,35 @@
+programa
+{
+	
+	funcao inicio()
+	{
+		//Matriz - uma estrutura composta assim como o vetor, todos os elementos são do mesmo tipo. 
+		//Declaração --> inteiro matriz[4][4]. sendo o primeiro as linhas e o segundo as colunas.
+		//Manipulação --> matirz[2][3] = 1. na linha 2 e terceira coluna se guarda o valor "1"
+		
+		//Exercício: Construa um algorítimo que efetue a leitura e a impressão de uma matriz 3x3 (possui 9 elementos)
+		//vamos dividir a matriz em 2 partes. 1- ler a matriz3x3. 2- mostrar a matriz
+
+		inteiro i, j, mat[3][3], soma // primeiro valor=i, segundo valor=j
+
+		soma=0 
+		
+		escreva("Leitura da Matriz\n")
+		para(i=0;i<3;i++){ //linha ----> Essa repetição faz as linhas, entao na primeira vez, ela roda a repetição de baixo, que entra com os 3 valores, depois passa 
+			//passa para a segunda linha, que entra com os proximos 3 valores e por ai vai.
+			para(j=0;j<3;j++){ //coluna
+				escreva("Digite o valor: ")
+				leia(mat[i][j])
+				soma=soma+mat[i][j]
+			}	
+		}
+		escreva("Leitura da Matriz\n")
+		para(i=0;i<3;i++){ //linha
+			para(j=0;j<3;j++){ //coluna
+				escreva(mat[i][j]," ")
+			}	
+			escreva("\n")
+		}
+		escreva(soma)
+	}
+}
