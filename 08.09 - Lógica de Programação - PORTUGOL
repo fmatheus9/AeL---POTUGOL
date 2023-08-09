@@ -31,5 +31,34 @@ programa
 			escreva("\n")
 		}
 		escreva(soma)
+
+	=======================================================================================================================================================
+
+	//Construa um algorítimo que efetue a leitura, a soma e a impressão do resultado entre duas matrizes[3][3]
+		//a soma de duas matrizes = uma matriz
+		//Divisão do exercicio 1- ler as duas matrizes, 2- somar os elementos das duas e armazenar, 3- mostrar o resultado
+
+		inteiro matriz1[3][3], matriz2[3][3], i, j, matrizsoma[3][3]
+		para(i=0;i<3;i++){
+			para(j=0;j<3;j++){
+				escreva("Entre com o valor da primeira matriz: ")
+				leia(matriz1[i][j])
+				escreva("Entre com o valor da segunda matriz: ")
+				leia(matriz2[i][j])
+			}
+		}
+		
+		para(i=0;i<3;i++){
+			para(j=0;j<3;j++){
+				matrizsoma[i][j]=matriz1[i][j]+matriz1[i][j]
+			}
+		}
+
+		para(i=0;i<3;i++){
+			para(j=0;j<3;j++){
+				escreva(matrizsoma[i][j]," ")
+			}
+			escreva("\n")
+		}
 	}
 }
