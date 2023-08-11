@@ -1,0 +1,51 @@
+programa
+{
+	
+	funcao inicio()
+	{
+		inteiro mat[5][5], i,j 
+		para(i=0;i<5;i++){
+			para(j=0;j<5;j++){
+				escreva("Informe os valores da matriz: ")
+				leia(mat[i][j])
+			}
+		}
+		escreva("Matriz Principal\n")
+		para(i=0;i<5;i++){
+			para(j=0;j<5;j++){
+				escreva(mat[i][j]," ")
+			}
+			escreva("\n")
+		}
+		
+		escreva("\nValores da diagonal principal: ") //os valores da diagonal sao os pares ordenados iguais (0,0)(1,1)(2,2)
+		para(i=0;i<5;i++){
+				escreva("\n", mat[i][i])
+		}
+
+  ===============================================================================================================================================================
+
+  inteiro mat[5][5], i,j 
+		const inteiro TAM = 0
+		para(i=0;i<5;i++){
+			para(j=0;j<5;j++){
+				//escreva("Informe os valores da matriz: ")
+				//leia(mat[i][j])
+				mat[i][j] = u.sorteia(10, 99)
+			}
+		}
+		escreva("Matriz Principal\n")
+		para(i=0;i<5;i++){
+			para(j=0;j<5;j++){
+				escreva(mat[i][j]," ")
+			}
+			escreva("\n")
+		}
+		
+		escreva("\nValores da diagonal secundária: ") //os valores da diagonal sao os pares ordenados iguais (0,0)(1,1)(2,2)
+		para(i=0;i<5;i++){
+				escreva(mat[i][4-i], " ")
+		}
+		
+	}
+}
