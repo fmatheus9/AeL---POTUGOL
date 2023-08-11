@@ -49,3 +49,42 @@ programa
 		
 	}
 }
+
+==========================================================================================================================================================
+
+programa
+{
+	
+inclua biblioteca Util --> u
+	
+	funcao inicio()
+	{
+		inteiro mat[3][4], i, j, somaA, somaB[4], somaC[3]
+		const inteiro TAM = 0
+
+		somaA=0
+		
+		escreva("Entrada de dados:\n")
+		para(i=0;i<3;i++){
+			para(j=0;j<4;j++){
+				escreva("Informe os valores da matriz: ")
+				leia(mat[i][j])
+				se(mat[i][j]%2!=0){
+				somaA=somaA+mat[i][j]
+				}
+			}
+		}
+		para(i=0;i<3;i++){
+			para(j=0;j<4;j++){
+				
+			}
+		}
+		
+		escreva("\nResultados:")
+		escreva("\n", somaA)
+		escreva("\n", )
+		escreva("\n")
+		
+		
+	}
+}
