@@ -54,12 +54,15 @@ programa
 
 programa
 {
-	
+	//a) a soma dos números ímpares fornecidos;
+	//b) a soma de cada uma das colunas;
+	//c) a soma de cada uma das linhas.
+
 inclua biblioteca Util --> u
 	
 	funcao inicio()
 	{
-		inteiro mat[3][4], i, j, somaA, somaB[4], somaC[3]
+		inteiro mat[3][4], i, j, somaA, somaB, somaC
 		const inteiro TAM = 0
 
 		somaA=0
@@ -74,17 +77,21 @@ inclua biblioteca Util --> u
 				}
 			}
 		}
-		para(i=0;i<3;i++){
-			para(j=0;j<4;j++){
-				
+		escreva("\n", somaA)
+		para(j=0;j<4;j++){
+			somaB=0
+			para(i=0;i<3;i++){
+				somaB=somaB+mat[i][j]  
 			}
+			escreva("\nSoma da coluna",j+1,": ",somaB)
 		}
 		
-		escreva("\nResultados:")
-		escreva("\n", somaA)
-		escreva("\n", )
-		escreva("\n")
-		
-		
+		para(i=0;i<3;i++){
+			somaC=0
+			para(j=0;j<4;j++){
+				somaC=somaC+mat[i][j]
+			}
+			escreva("\nSoma da linha",i+1,": ",somaC)
+		}	
 	}
 }
