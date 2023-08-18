@@ -78,3 +78,69 @@ programa
 		}
 	}
 }
+
+=======================================================================================================================================
+
+programa
+{
+	inclua biblioteca Util --> u
+	
+	funcao inicio()
+	{
+		inteiro mat[5][5],i,j, gaveta
+		const inteiro TAM = 0
+
+		para(i=0;i<5;i++){
+			para(j=0;j<5;j++){
+				//escreva("Informe os valores da matriz: ")
+				//leia(mat[i][j])
+				mat[i][j] = u.sorteia(10, 99)
+			}
+		}
+		escreva("Matriz Principal\n")
+		para(i=0;i<5;i++){
+			para(j=0;j<5;j++){
+				escreva(mat[i][j]," ")
+			}
+			escreva("\n")
+		}
+		para(j=0;j<5;j++){
+			i=1
+				gaveta = mat[i][j]
+				mat[i][j] = mat[4][j]
+				mat[4][j] = gaveta
+		}
+		escreva("\nMatriz Trocada A)\n")
+		para(i=0;i<5;i++){
+			para(j=0;j<5;j++){
+				escreva(mat[i][j]," ")
+			}
+			escreva("\n")
+		}
+		para(i=0;i<5;i++){
+			j=0
+				gaveta = mat[i][0]
+				mat[i][0] = mat[i][3]
+				mat[i][3] = gaveta
+		}
+		escreva("\nMatriz Trocada B)\n")
+		para(i=0;i<5;i++){
+			para(j=0;j<5;j++){
+				escreva(mat[i][j]," ")
+			}
+			escreva("\n")
+		}
+		para(i=0;i<5;i++){
+			gaveta = mat[i][i]
+			mat[i][i] = mat[i][5-1-i]
+			mat[i][5-1-i] = gaveta
+		}
+		escreva("\nMatriz Trocada C)\n")
+		para(i=0;i<5;i++){
+			para(j=0;j<5;j++){
+				escreva(mat[i][j]," ")
+			}
+			escreva("\n")
+		}
+	}
+}
