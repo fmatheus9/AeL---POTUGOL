@@ -1,0 +1,119 @@
+programa
+{
+	inclua biblioteca Util
+ --> u 
+	
+	funcao inicio()
+	{
+		//Crie um algoritmo que leia um conjunto de números inteiros para preencher uma matriz 10 x 10 e a partir daí,
+		//gere um vetor com os maiores elementos de cada linha e outro vetor com os menores elementos de cada coluna.
+		
+		inteiro mat[10][10],i,j,maiores[10],menores[10]
+
+		para(i=0;i<10;i++){
+			para(j=0;j<10;j++){
+				//escreva("Informe os valores da matriz: ")
+				//leia(mat[i][j])
+				mat[i][j] = u.sorteia(10, 99)
+			}
+		}
+		
+		escreva("Matriz Principal\n")
+		para(i=0;i<10;i++){
+			para(j=0;j<10;j++){
+				escreva(mat[i][j]," ")
+			}
+			escreva("\n")
+		}
+		
+		para(i=0;i<10;i++){
+			maiores[i]=0
+			para(j=0;j<10;j++){
+				se(mat[i][j]>maiores[i]){
+					maiores[i]=mat[i][j]
+				}
+				
+			}
+		}
+		
+		para(j=0;j<10;j++){
+			menores[j]=100
+			para(i=0;i<10;i++){
+				se(mat[i][j]<menores[j]){
+					menores[j]=mat[i][j]
+				}
+			}
+		}
+		
+		escreva("\nMaiores elementos por linha:\n")
+		para(i=0;i<10;i++){
+			escreva("\nMaior elemento da linha ",i+1," = ", maiores[i])
+		}
+		escreva("\n\nMenores elementos por coluna:\n")
+		para(j=0;j<10;j++){
+			escreva("\nMenor elemento da coluna ",j+1," = ", menores[j])
+		}
+	}
+}
+
+====================================================================================================================================================================
+
+programa
+{
+	inclua biblioteca Util
+ --> u 
+	
+	funcao inicio()
+	{
+		//Crie um algoritmo que leia um conjunto de números inteiros para preencher uma matriz 10 x 10 e a partir daí,
+		//gere um vetor com os maiores elementos de cada linha e outro vetor com os menores elementos de cada coluna.
+		
+		inteiro mat[10][10],i,j,maiores[10],menores[10], auxMaior, auxMenor
+
+		para(i=0;i<10;i++){
+			para(j=0;j<10;j++){
+				//escreva("Informe os valores da matriz: ")
+				//leia(mat[i][j])
+				mat[i][j] = u.sorteia(10, 99)
+			}
+		}
+		
+		escreva("Matriz Principal\n")
+		para(i=0;i<10;i++){
+			para(j=0;j<10;j++){
+				escreva(mat[i][j]," ")
+			}
+			escreva("\n")
+		}
+		
+		para(i=0;i<10;i++){
+			auxMaior=mat[i][0]
+			para(j=0;j<10;j++){
+				se(mat[i][j]>auxMaior){
+					auxMaior = mat[i][j]
+				}
+			}
+			maiores[i]=auxMaior
+		}
+		
+		
+		para(j=0;j<10;j++){
+			auxMenor=mat[0][j]
+			para(i=0;i<10;i++){
+				se(mat[i][j]<auxMenor){
+					auxMenor=mat[i][j]
+				}
+			}
+			menores[j]=auxMenor
+		}
+		
+		escreva("\nMaiores elementos por linha:\n")
+		para(i=0;i<10;i++){
+			escreva("\nMaior elemento da linha ",i+1," = ", maiores[i])
+		}
+		escreva("\n\nMenores elementos por coluna:\n")
+		para(j=0;j<10;j++){
+			escreva("\nMenor elemento da coluna ",j+1," = ", menores[j])
+		}
+	}
+}
