@@ -1,0 +1,55 @@
+// Modularização em PORTUGOL 
+// O objetivo é separar o código e diminuir a complexibilidade e facilitar o trabalho em equipe. É dividir o problema em partes menores. Vantagens: Simplificação da manutenção, testes individuais, reaproveitamento. 
+// Declaração: modulo Entrada 
+                 // comando 1
+                 // comando 2
+            // fimmodulo
+
+====================================================================================================================================================================================================================
+
+programa
+{
+	
+	funcao inicio()
+	{
+		inteiro a, b
+		a = 7
+		b = 15
+		escreva(a," ",b,"\n")
+		troca(a,b) // aqui entra a função troca
+		escreva(a," ",b,"\n")
+	}
+	
+	funcao troca(inteiro &a, inteiro &b){ // se tirar o "&" o valor não troca pois o "&" serve para alterar os valores e refletir dentro da função principal. 
+		inteiro aux
+		aux = a
+		a = b
+		b = aux
+	}
+}
+
+====================================================================================================================================================================================================================
+
+programa
+{
+	
+	funcao inicio()
+	{
+		inteiro x , y, s
+		escreva("x: ")
+		leia(x)
+		escreva("y: ")
+		leia(y)
+		s = soma(x,y) //Aqui entra a função soma. A variável "s" recebe o "retorne" da função soma. 
+		escreva("Soma = ", s,"\n")
+	}
+	
+	funcao inteiro soma(inteiro x, inteiro y){ // precisa declarar o tipo. 
+		inteiro result 
+		result = x+y
+		retorne result // chegou no retorne ele para a função e retorna para a função comercial. 
+	}
+}
+
+====================================================================================================================================================================================================================
+
