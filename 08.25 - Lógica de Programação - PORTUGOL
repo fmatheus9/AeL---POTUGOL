@@ -1,0 +1,72 @@
+programa
+{
+	
+	funcao inicio()
+	{
+		//Passagem de parâmetros: VETOR
+
+		const inteiro TAM = 5
+		inteiro i
+		real vet[TAM], s 
+
+		para(i=0;i<TAM;i++){
+			escreva("Informe o ", i+1, " valor do vetor: ")
+			leia(vet[i])
+		}
+		s = somavet(vet, TAM)
+		escreva("Soma = ", s ," \n")
+	}
+
+	funcao real somavet(real vet[], inteiro TAM)
+	{
+		inteiro i 
+		real soma = 0.0 
+		para(i=0;i<TAM;i++){
+			soma = soma + vet[i]
+		}
+		retorne soma
+	}
+}
+
+==================================================================================================================================================================================================================
+
+programa
+{
+	
+	funcao inicio()
+	{
+		//Passagem de parâmetros: VETOR
+
+		const inteiro TAM = 5
+		inteiro i
+		real vet[TAM], s , m
+
+		para(i=0;i<TAM;i++){
+			escreva("Informe o ", i+1, " valor do vetor: ")
+			leia(vet[i])
+		}
+		s = somavet(vet, TAM)
+		escreva("Soma = ", s ," \n")
+		m = mediavet(s, TAM)
+		escreva("Média = ", m ," \n")
+	}
+
+	funcao real somavet(real vet[], inteiro TAM)
+	{
+		inteiro i 
+		real soma = 0.0 
+		para(i=0;i<TAM;i++){
+			soma = soma + vet[i]
+		}
+		retorne soma
+	}
+
+	funcao real mediavet(real s, inteiro TAM)
+	{
+		real media = 0.0
+		media = s/TAM
+		retorne media
+	}
+}
+
+===================================================================================================================================================================================================================
