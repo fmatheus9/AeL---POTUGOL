@@ -1,0 +1,42 @@
+programa
+{
+	inclua biblioteca Util
+ --> u
+//Fazer um algoritmo que leia uma matriz 20x20. Além disso, ler 5 valores, e para cada valor lido, 
+//fazer uma busca do valor na matriz e, escrever a localização (linha e coluna) ou uma mensagem de “não encontrado”.
+	
+	funcao inicio()
+	{
+		inteiro mat[20][20], vetx[5], i ,j, k
+
+		
+		para(i=0;i<20;i++){
+			para(j=0;j<20;j++){
+				mat[i][j] = u.sorteia(10, 99)
+			}
+		}
+		
+		escreva("Matriz Principal\n")
+		para(i=0;i<20;i++){
+			para(j=0;j<20;j++){
+				escreva(mat[i][j]," ")
+			}
+			escreva("\n")
+		}
+		
+		para(k=0;k<5;k++){
+			escreva("Informe um valor: ")
+			leia(vetx[k])
+			para(i=0;i<20;i++){
+				para(j=0;j<20;j++){
+					se(vetx[k]==mat[i][j]){
+						escreva("Valor encontrado. Linha: ", i," Coluna: ",j,"\n")
+					}
+				}
+			}
+		}
+	}
+}
+
+=========================================================================================================================================================================================================================================
+
