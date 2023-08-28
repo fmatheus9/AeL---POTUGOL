@@ -40,3 +40,31 @@ programa
 
 =========================================================================================================================================================================================================================================
 
+programa
+{
+	
+	funcao inicio()
+	{
+		caracter a, b
+
+		escreva("Informe um caracter: ")
+		leia(a)
+		b = function(a)
+		escreva(b)
+	}
+
+	funcao caracter function(caracter a)
+	{
+		caracter result = ' '
+		se(a == 'A' ou a == 'E' ou a == 'I' ou a == 'O' ou a == 'U'){
+			result = '2'
+		}
+		senao se(a == 'a' ou a == 'e' ou a == 'i' ou a == 'o' ou a == 'u'){
+			result = '1'
+		}
+		senao{
+			result = '0'
+		}
+		retorne result
+	}
+}
