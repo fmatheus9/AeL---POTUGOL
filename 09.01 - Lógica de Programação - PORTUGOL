@@ -1,0 +1,47 @@
+programa
+{
+//Fazer um subprograma que receba, por parâmetro, a hora de início e a hora de término de um jogo, ambas subdivididas em 2 valores distintos:
+//horas e minutos. O subprograma deve retornar a duração do jogo em minutos, considerando que o tempo máximo de duração de um jogo é de 24 horas 
+//e que o jogo pode começar em um dia e terminar no outro.
+
+	
+	funcao inicio()
+	{
+		inteiro h1,h2,m1,m2, horas, minutos
+		escreva("Informe o horário de início (HORAS): ")
+		leia(h1)
+		escreva("Informe o horário de início (MINUTOS): ")
+		leia(m1)
+		escreva("Informe o horário de término (HORAS): ")
+		leia(h2)
+		escreva("Informe o horário de término (MINUTOS): ")
+		leia(m2)
+		horas = hora(h1, h2)
+		minutos = minuto(m1, m2)
+		escreva("Tempo de jogo: ",horas+minutos)
+	}
+	funcao inteiro hora(inteiro h1, inteiro h2){
+		inteiro result
+		se(h1>h2){
+			result = (24-h1)+h2
+		}
+		senao{
+			result = h2-h1
+		}
+		result = result*60
+		retorne result
+	}
+	funcao inteiro minuto(inteiro m1, inteiro m2){
+		inteiro result
+		se(m1>m2){
+			result = (60-m1)+m2
+		}
+		senao{
+			result = m2-m1
+		}
+		retorne result
+	}
+}
+
+===================================================================================================================================================================================================================
+
