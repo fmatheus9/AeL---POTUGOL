@@ -45,3 +45,58 @@ programa
 
 ===================================================================================================================================================================================================================
 
+programa
+{
+	inclua biblioteca Util
+ --> u
+	//Fazer um subprograma que realize uma busca de um valor na matriz e retorne a linha ou -1 caso não encontre.O algoritmo deve ler uma matriz 20x20,
+	//e depois ler 5 valores, fornecidos pelo usuário, e para cada valor lido, retornar uma mensagem em que linha o elemento está ou que não foi encontrado na matriz.
+
+	funcao inicio()
+	{
+		inteiro mat[20][20], i, j, valor, retorno
+		valor = 0
+
+		para(i=0;i<20;i++){
+			para(j=0;j<20;j++){
+				mat[i][j] = u.sorteia(10, 99)
+			}
+		}
+		
+		escreva("Matriz Principal\n")
+		para(i=0;i<20;i++){
+			para(j=0;j<20;j++){
+				escreva(mat[i][j]," ")
+			}
+			escreva("\n")
+		}
+
+		escreva("\nLeitura dos valores: ")
+		para(i=0;i<5;i++){
+			escreva("\nInforme o valor: ")
+			leia(valor)
+			retorno = function(mat, valor)
+			se(retorno>0){
+				escreva("linha: ",retorno)
+			}
+			senao{
+				escreva(retorno)
+			}
+		}
+
+	}
+
+	funcao inteiro function(inteiro mat[][], inteiro valor){
+			inteiro result, i, j
+				para(i=0;i<20;i++){
+					para(j=0;j<20;j++){
+						se(valor == mat[i][j]){
+							retorne i
+						}
+					}
+				}
+			retorne -1
+		}
+}
+
+================================================================================================================================================================
