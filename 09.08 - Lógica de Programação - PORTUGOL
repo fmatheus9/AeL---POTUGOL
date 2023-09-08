@@ -1,0 +1,73 @@
+programa
+{
+//Fazer dois subprogramas: um que  encontre o maior valor de um vetor e outro que encontre o segundo maior valor de um vetor. 
+//Lembre-se que um subprograma pode chamar um outro subprograma.
+	
+	funcao inicio()
+	{
+		inteiro vetor[5], i, x, y
+		para(i=0;i<5;i++){
+			escreva("Informe o valor do vetor: ")
+			leia(vetor[i])
+		}
+		x = maiornumero(vetor)
+		y = maiornumero2(vetor,x)
+		escreva("Maior número: ",x)
+		escreva("\nSegundo maior número: ",y)
+	}
+	funcao inteiro maiornumero(inteiro vetor[]){
+		inteiro result,i
+		result = vetor[0]
+		para(i=0;i<5;i++){
+			se(result<vetor[i]){
+				result = vetor[i]
+			}
+		}
+		retorne result
+	}
+	funcao inteiro maiornumero2(inteiro vetor[], inteiro x){
+		inteiro result, i 
+		result = vetor[1]
+		para(i=0;i<5;i++){
+			se(result < vetor[i] e vetor[i] < x){
+				result = vetor[i]
+			}
+		}
+		retorne result
+	}
+}
+
+=================================================================================================================================================================================================================
+
+programa
+{
+//Fazer um subprograma que calcule o valor da expressão: 2/3 + 3/5 + 4/7 + 5/9 + … + N/M, para um valor de N definido pelo usuário. 
+//Verifique se o valor de N definido pelo usuário é positivo e, caso não seja, solicite outro valor até ser fornecido um valor positivo.
+//Esta validação deve ser realizada antes de chamar o subprograma.
+
+	funcao inicio()
+	{
+		inteiro N
+		real resultado 
+		faca{
+			escreva("Informe o valor de N: ")
+			leia(N)
+		}enquanto(N<0)
+
+		resultado = valor_da_expressao(N)
+		escreva("Resultado da expressão: ", resultado)
+	}
+
+	funcao real valor_da_expressao(inteiro N){
+		real result,num,den
+		result = 0.0
+		num = 2.0
+		den = 3.0
+		enquanto (num<=N){
+			result = result + (num/den)
+			num = num+1 
+			den = den+2
+		}
+		retorne result 
+	}
+}
