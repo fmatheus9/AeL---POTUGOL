@@ -1,0 +1,136 @@
+programa
+{
+	inclua biblioteca Util--> u
+ 
+	funcao inicio()
+	{
+		inteiro opcao, case2, case3, case4 ,case5, numero1, n1,n2,n3, f, N, valorVet
+		cadeia  case1
+		faca{
+		escreva("Exercicio 2\n=============================================\n")
+		escreva("1-Escrever a tabuada de um número.\n2-Encontra o menor elemento entre três números.\n3-Calcular o fatorial de um número\n4-Calcular o seguinte somatório: S = 1 + 1/1! + 1/2! + 1/3! + ... + 1/N!\n5-Buscar um dado elemento em um vetor\n6-Calcular a média dos números pares de uma matriz.\n7-Sair.\n")
+		escreva("Informe um valor: ")
+		leia(opcao)
+		escolha(opcao){
+			caso 1:
+			escreva("Informe um número: ")
+			leia(numero1)
+			se(numero1 <0 ou numero1 > 9){
+				escreva("Valor inválido")
+			}
+			senao{
+				case1 = function1(numero1)
+				escreva("Tabuada: ")
+				escreva(case1,"\n")
+			}
+			pare
+			
+			caso 2:
+			escreva("Informe o primeiro número: ")
+			leia(n1)
+			escreva("Informe o segundo número: ")
+			leia(n2)
+			escreva("Informe uo terceiro número: ")
+			leia(n3)
+			case2 = function2(n1,n2,n3)
+			escreva("O menor valor informado foi: ", case2,"\n\n")
+			pare
+
+			caso 3:
+			escreva("Informe o valor: ")
+			leia(f)
+			case3 = function3(f)
+			escreva("Valor do fatorial de ",f,": ",case3,"\n\n")
+			pare
+
+			caso 4:
+			escreva("Informe o valor de N: ")
+			leia(N)
+			case4 = function4(N)
+			escreva("Valor do somatório: ", case4, "\n\n")
+			pare
+
+			caso 5:
+			escreva("Informe um valor a ser encontrado dentro do vetor: ")
+			leia(valorVet)
+			case5 = function5(valorVet)
+			escreva("Posição no vetor: ", case5,"\n\n")
+			pare
+
+			caso 6:
+			pare
+
+			caso 7:
+			escreva("Sisitema encerrado.")
+			pare
+
+			caso contrario:
+			escreva("Valor inválido!")
+			
+		}
+		
+		}enquanto(opcao != 7)
+	}
+	funcao cadeia function1(inteiro numero1){
+		inteiro result, i
+		cadeia result2 =""
+		result = 0
+		para(i=1;i<=10;i++){
+			result = i*numero1
+			result2 = result2+result+"\n"
+		}
+		retorne result2
+	}
+
+	funcao inteiro function2(inteiro n1, inteiro n2, inteiro n3){
+		inteiro result
+		result = n1
+		se(result>n2){
+			result = n2
+		}
+		se(result>n3){
+			result = n3
+		}
+		retorne result
+	}
+
+	funcao inteiro function3(inteiro f){
+		inteiro result, i
+		result = 1
+		para(i=1;i<=f;i++){
+			result = result*i
+		}
+		retorne result
+	}
+
+	funcao inteiro function4(inteiro N){
+		inteiro result, i,s
+		s = 1
+		result = 0
+		para(i=1;i<=N;i++){
+			s = s*i
+			result = result+1/s
+		} 
+		retorne result
+	}
+	funcao inteiro function5(inteiro valorVet){
+		inteiro result, i, vetor[10]
+		result = -1
+		para(i=0;i<10;i++){
+			vetor[i] = u.sorteia(0, 99)
+		}
+		para(i=0;i<10;i++){
+			se(valorVet == vetor[i]){
+				result = i
+			}
+		}
+		se(result == -1){
+			retorne result
+		}
+		senao{
+			retorne result
+		}
+		
+	}
+	
+}
