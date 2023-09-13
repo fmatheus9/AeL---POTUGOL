@@ -4,7 +4,7 @@ programa
  
 	funcao inicio()
 	{
-		inteiro opcao, case2, case3, case4 ,case5, numero1, n1,n2,n3, f, N, valorVet
+		inteiro opcao, case2, case3, case4 ,case5, case6, numero1, n1,n2,n3, f, N, valorVet, vetor[10], i, j, mat[5][5]
 		cadeia  case1
 		faca{
 		escreva("Exercicio 2\n=============================================\n")
@@ -16,7 +16,7 @@ programa
 			escreva("Informe um número: ")
 			leia(numero1)
 			se(numero1 <0 ou numero1 > 9){
-				escreva("Valor inválido")
+				escreva("Valor inválido\n")
 			}
 			senao{
 				case1 = function1(numero1)
@@ -53,11 +53,31 @@ programa
 			caso 5:
 			escreva("Informe um valor a ser encontrado dentro do vetor: ")
 			leia(valorVet)
-			case5 = function5(valorVet)
-			escreva("Posição no vetor: ", case5,"\n\n")
+			para(i=0;i<10;i++){
+				vetor[i] = u.sorteia(0, 99)
+			}
+			case5 = function5(valorVet, vetor)
+			escreva("Valor do vetor: \n")
+			para(i=0;i<10;i++){
+				escreva(vetor[i], " - ")
+			}
+			escreva("\nPosição no vetor: ", case5,"\n\n")
 			pare
 
 			caso 6:
+			para(i=0;i<5;i++){
+				para(j=0;j<5;j++){
+					mat[i][j] = u.sorteia(0, 9)
+				}
+			}
+			para(i=0;i<5;i++){
+				para(j=0;j<5;j++){
+					escreva(mat[i][j]," ")
+				}
+				escreva("\n")
+			}
+			case6 = function6(mat)
+			escreva("Soma dos números pares: ", case6, "\n\n")
 			pare
 
 			caso 7:
@@ -104,21 +124,12 @@ programa
 	}
 
 	funcao inteiro function4(inteiro N){
-		inteiro result, i,s
-		s = 1
-		result = 0
-		para(i=1;i<=N;i++){
-			s = s*i
-			result = result+1/s
-		} 
-		retorne result
+		
 	}
-	funcao inteiro function5(inteiro valorVet){
-		inteiro result, i, vetor[10]
+	
+	funcao inteiro function5(inteiro valorVet, inteiro vetor[]){
+		inteiro result, i
 		result = -1
-		para(i=0;i<10;i++){
-			vetor[i] = u.sorteia(0, 99)
-		}
 		para(i=0;i<10;i++){
 			se(valorVet == vetor[i]){
 				result = i
@@ -130,7 +141,18 @@ programa
 		senao{
 			retorne result
 		}
-		
 	}
 	
+	funcao inteiro function6(inteiro mat[][]){
+		inteiro result, i, j
+		result=0
+		para(i=0;i<5;i++){
+				para(j=0;j<5;j++){
+					se(mat[i][j]%2==0){
+						result=result+mat[i][j]
+					}
+				}
+			}
+		retorne result
+	}	
 }
