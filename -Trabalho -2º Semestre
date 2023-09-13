@@ -1,6 +1,39 @@
 programa
 {
 	inclua biblioteca Util--> u
+//Fazer um algoritmo para corrigir provas de múltipla escolha de uma turma de 40 alunos. Cada
+//prova tem 5 questões, sendo que cada questão vale dois pontos. Além da leitura dos dados dos
+//alunos (nome e respostas das questões), deve ser lido o gabarito para a correção da prova. O
+//algoritmo deverá calcular e imprimir a menor nota, a maior nota, a média da turma, a
+//quantidade de alunos com nota acima da média da turma, e a porcentagem de alunos aprovados,
+//sabendo-se que a nota mínima de aprovação é 7,0. Utilizar matriz para armazenar as respostas
+//dos alunos	
+	funcao inicio()
+	{
+	
+		inteiro i,j 
+		cadeia matriz[5][5], vetor[5]
+		para(i=0;i<5;i++){
+			escreva("Informe o nome: ")
+			leia(vetor[i])
+			para(j=0;j<5;j++){
+					escreva("Informe a resposta da questao ", j+1,":")
+					leia(matriz[i][j])
+			}
+		}
+	}
+}
+
+
+
+
+==================================================================================================================================================================
+
+
+
+programa
+{
+	inclua biblioteca Util--> u
  
 	funcao inicio()
 	{
