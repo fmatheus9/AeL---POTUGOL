@@ -10,11 +10,11 @@ programa
 	funcao inicio()
 	{
 	
-		inteiro i, j, pontos, notas[4], qnt
+		inteiro i, j, pontos, notas[40], qnt
 		real media, porcentagem
-		cadeia nomes[4], respostas[4][5], gabarito[5], menor_nota, maior_nota
+		cadeia nomes[40], respostas[40][5], gabarito[5], menor_nota, maior_nota
 		escreva("ENTRADA DE DADOS:\n")
-		para(i=0;i<4;i++){
+		para(i=0;i<40;i++){
 			escreva("\nEntre com o nome do aluno ", i+1,": ")
 			leia(nomes[i])
 			para(j=0;j<5;j++){
@@ -30,7 +30,7 @@ programa
 		}
 		
 		//Calculo das notasqntidade = 0.0
-		para(i=0;i<4;i++){
+		para(i=0;i<40;i++){
 			pontos = 0
 			para(j=0;j<5;j++){
 				se(respostas[i][j] == gabarito[j]){
@@ -62,7 +62,7 @@ programa
 		cadeia result
 		result = "Nome: " + nomes[0] + " Nota: " + notas[0]
 		menor = notas[0]
-		para(i=0;i<4;i++){
+		para(i=0;i<40;i++){
 			se(notas[i]<menor){
 				menor = notas[i]
 				result = "Nome: " + nomes[i] + " Nota: " + notas[i]
@@ -76,7 +76,7 @@ programa
 		cadeia result
 		result = "Nome: " + nomes[0] + " Nota: " + notas[0]
 		maior = notas[0]
-		para(i=0;i<4;i++){
+		para(i=0;i<40;i++){
 			se(maior<notas[i]){
 				maior = notas[i]
 				result = "Nome: " + nomes[i] + " Nota: " + notas[i]
@@ -88,17 +88,17 @@ programa
 	funcao real function3(inteiro notas[]){
 		inteiro i
 		real result = 0.0
-		para(i=0;i<4;i++){
+		para(i=0;i<40;i++){
 			result = result + notas[i]
 		}
-		result = result/4
+		result = result/40
 		retorne result
 	}
 
 	funcao inteiro function4(real media, inteiro notas[]){
 		inteiro i , result
 		result = 0
-		para(i=0;i<4;i++){
+		para(i=0;i<40;i++){
 			se(notas[i]> media){
 				result = result+1
 			}
@@ -109,12 +109,12 @@ programa
 	funcao real function5(inteiro notas[]){
 		inteiro i
 		real result, qntidade = 0.0
-		para(i=0;i<4;i++){
+		para(i=0;i<40;i++){
 			se(notas[i]>=7){
 				qntidade++
 			}
 		}
-		result = (qntidade*100)/4
+		result = (qntidade*100)/40
 		retorne result
 	}
 }
