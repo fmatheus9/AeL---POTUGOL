@@ -1,26 +1,121 @@
 programa
 {
-	inclua biblioteca Util--> u
 //Fazer um algoritmo para corrigir provas de múltipla escolha de uma turma de 40 alunos. Cada
 //prova tem 5 questões, sendo que cada questão vale dois pontos. Além da leitura dos dados dos
 //alunos (nome e respostas das questões), deve ser lido o gabarito para a correção da prova. O
 //algoritmo deverá calcular e imprimir a menor nota, a maior nota, a média da turma, a
 //quantidade de alunos com nota acima da média da turma, e a porcentagem de alunos aprovados,
-//sabendo-se que a nota mínima de aprovação é 7,0. Utilizar matriz para armazenar as respostas
-//dos alunos	
+//sabendo-se que a nota mínima de aprovação é 7,0. Utilizar matriz para armazenar as respostas dos alunos
+	
 	funcao inicio()
 	{
 	
-		inteiro i,j 
-		cadeia matriz[5][5], vetor[5]
-		para(i=0;i<5;i++){
-			escreva("Informe o nome: ")
-			leia(vetor[i])
+		inteiro i, j, pontos, notas[4], qnt
+		real media, porcentagem
+		cadeia nomes[4], respostas[4][5], gabarito[5], menor_nota, maior_nota
+		escreva("ENTRADA DE DADOS:\n")
+		para(i=0;i<4;i++){
+			escreva("\nEntre com o nome do aluno ", i+1,": ")
+			leia(nomes[i])
 			para(j=0;j<5;j++){
-					escreva("Informe a resposta da questao ", j+1,":")
-					leia(matriz[i][j])
+				escreva("Entre com a resposta da questao ", j+1," (a,b,c,d,e): ")
+				leia(respostas[i][j])
 			}
 		}
+
+		escreva("\nGABARITO:\n")
+		para(j=0;j<5;j++){
+			escreva("Entre com a resposta da questao ", j+1,": ")
+			leia(gabarito[j])
+		}
+		
+		//Calculo das notasqntidade = 0.0
+		para(i=0;i<4;i++){
+			pontos = 0
+			para(j=0;j<5;j++){
+				se(respostas[i][j] == gabarito[j]){
+					pontos = pontos+2
+				}
+			}
+			notas[i] = pontos
+		}
+
+		escreva("\nMENOR NOTA:\n")
+		menor_nota = function1(notas, nomes)
+		escreva(menor_nota)
+		escreva("\n\nMAIOR NOTA:\n")
+		maior_nota = function2(notas,nomes)
+		escreva(maior_nota)
+		escreva("\n\nMEDIA DA TURMA:\n")
+		media = function3(notas)
+		escreva(media)
+		escreva("\n\nQUANTIDADE DE ALUNOS COM A NOTA ACIMA DA MEDIA DA TURMA:\n")
+		qnt = function4(media, notas)
+		escreva(qnt)
+		escreva("\n\nPORCENTAGEM DE ALUNOS APROVADOS:\n")
+		porcentagem = function5(notas)
+		escreva(porcentagem,"%")
+	}
+
+	funcao cadeia function1(inteiro notas[], cadeia nomes[]){
+		inteiro i, menor
+		cadeia result
+		result = "Nome: " + nomes[0] + " Nota: " + notas[0]
+		menor = notas[0]
+		para(i=0;i<4;i++){
+			se(notas[i]<menor){
+				menor = notas[i]
+				result = "Nome: " + nomes[i] + " Nota: " + notas[i]
+			}
+		}
+		retorne result
+	}
+	
+	funcao cadeia function2(inteiro notas[], cadeia nomes[]){
+		inteiro i, maior
+		cadeia result
+		result = "Nome: " + nomes[0] + " Nota: " + notas[0]
+		maior = notas[0]
+		para(i=0;i<4;i++){
+			se(maior<notas[i]){
+				maior = notas[i]
+				result = "Nome: " + nomes[i] + " Nota: " + notas[i]
+			}
+		}
+		retorne result
+	}
+
+	funcao real function3(inteiro notas[]){
+		inteiro i
+		real result = 0.0
+		para(i=0;i<4;i++){
+			result = result + notas[i]
+		}
+		result = result/4
+		retorne result
+	}
+
+	funcao inteiro function4(real media, inteiro notas[]){
+		inteiro i , result
+		result = 0
+		para(i=0;i<4;i++){
+			se(notas[i]> media){
+				result = result+1
+			}
+		}
+		retorne result
+	}
+
+	funcao real function5(inteiro notas[]){
+		inteiro i
+		real result, qntidade = 0.0
+		para(i=0;i<4;i++){
+			se(notas[i]>=7){
+				qntidade++
+			}
+		}
+		result = (qntidade*100)/4
+		retorne result
 	}
 }
 
