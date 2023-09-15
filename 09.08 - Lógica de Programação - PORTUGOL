@@ -11,7 +11,7 @@ programa
 			leia(vetor[i])
 		}
 		x = maiornumero(vetor)
-		y = maiornumero2(vetor,x)
+		y = maiornumero2(vetor)
 		escreva("Maior número: ",x)
 		escreva("\nSegundo maior número: ",y)
 	}
@@ -25,11 +25,12 @@ programa
 		}
 		retorne result
 	}
-	funcao inteiro maiornumero2(inteiro vetor[], inteiro x){
-		inteiro result, i 
-		result = vetor[1]
+	funcao inteiro maiornumero2(inteiro vetor[]){
+		inteiro result, i, x
+		result = vetor[0]
+		x = maiornumero(vetor)
 		para(i=0;i<5;i++){
-			se(result < vetor[i] e vetor[i] < x){
+			se(result < vetor[i] e vetor[i] != x){
 				result = vetor[i]
 			}
 		}
