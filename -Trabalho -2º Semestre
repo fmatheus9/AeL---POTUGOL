@@ -132,7 +132,8 @@ programa
  
 	funcao inicio()
 	{
-		inteiro opcao, case2, case3, case4 ,case5, case6, numero1, n1,n2,n3, f, N, valorVet, vetor[10], i, j, mat[5][5]
+		inteiro opcao, case2, case3 ,case5, case6, numero1, n1,n2,n3, f, N, valorVet, vetor[10], i, j, mat[5][5]
+		real case4
 		cadeia  case1
 		faca{
 		escreva("Exercicio 2\n=============================================\n")
@@ -251,8 +252,14 @@ programa
 		retorne result
 	}
 
-	funcao inteiro function4(inteiro N){
-		
+	funcao real function4(inteiro N){
+		inteiro i
+		real result
+		result = 1.0
+		para(i=1;i<=N;i++){
+			result = result + 1.0/function3(i)
+		}
+		retorne result
 	}
 	
 	funcao inteiro function5(inteiro valorVet, inteiro vetor[]){
